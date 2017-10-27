@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tez.levent.feyyaz.kedi.activities.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/bildirim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:contentPadding="15dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/notify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Bildirim Al"
+                    tools:ignore="HardcodedText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Bildirim ayarı aktifse, takip ettiğiniz kulüplerin oluşturduğu etkinlik veya duyuruların bildirimlerini alırsınız"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/temizle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?selectableItemBackground"
+            card_view:contentPadding="15dp"
+            android:layout_marginTop="8dp"
+            android:onClick="temizle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/size"
+                    android:layout_alignBottom="@+id/size"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Önbellek Boyutu"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7,4 MB"
+                    android:textColor="@color/colorPrimary"
+                    tools:ignore="HardcodedText"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

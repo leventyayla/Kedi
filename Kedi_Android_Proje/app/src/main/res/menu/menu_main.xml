@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="tez.levent.feyyaz.kedi.activities.MainActivity">
+
+    <item
+        android:id="@+id/arama"
+        android:icon="@drawable/search_white"
+        android:orderInCategory="100"
+        android:title="Arama Yapın"
+        app:showAsAction="always" />
+</menu>

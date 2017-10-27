@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Kullanıcı">
+        <menu>
+            <item
+                android:title="Profil"
+                android:id="@+id/profile"
+                android:icon="@drawable/person_black"/>
+            <item
+                android:title="Favorilerim"
+                android:id="@+id/favoriler"
+                android:icon="@drawable/favori_off"/>
+            <item
+                android:title="Katıldıklarım"
+                android:id="@+id/katildiklarim"
+                android:icon="@drawable/katildiklarim"/>
+        </menu>
+    </item>
+
+    <group android:id="@+id/group_settings_id">
+
+        <item
+            android:id="@+id/takiptekiler"
+            android:title="Sadece Takiptekiler"
+            android:icon="@drawable/takip_off"
+            app:actionLayout="@layout/drawer_switch"/>
+
+        <item android:title="Ayarlar"
+              android:id="@+id/settings"
+              android:icon="@drawable/settings"/>
+    </group>
+
+</menu>

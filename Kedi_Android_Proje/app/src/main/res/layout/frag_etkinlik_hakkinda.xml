@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/text_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/baslik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Başlık"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/colorPrimary"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Açıklama kısmı"
+        android:id="@+id/aciklama"
+        tools:ignore="HardcodedText"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

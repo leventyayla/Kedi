@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/drawer_logo_margin"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription"/>
+
+
+    <TextView
+        android:text="Levent Yayla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/k_isim"
+        android:layout_below="@+id/foto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        tools:ignore="HardcodedText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"/>
+
+</RelativeLayout>

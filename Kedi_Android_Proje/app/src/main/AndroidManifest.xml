@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="tez.levent.feyyaz.kedi"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:supportsRtl">
+        <activity
+            android:name=".activities.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:theme="@style/NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LoginActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Transparent">
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:label="Kullanıcı Profili">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.details.EtkinlikActivity"
+            android:label="Etkinlik Hakkında"
+            android:theme="@style/Transparent"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tez.levent.feyyaz.kedi.activities.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="Ayarlar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.details.KulupActivity"
+            android:label="Kulüp Hakkında">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.details.DuyuruActivity"
+            android:label="Duyuru Hakkında">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.details.EtkinlikPhotoActivity"
+            android:label="Görsel Detay"
+            android:theme="@style/PhotoView">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tez.levent.feyyaz.kedi.activities.details.EtkinlikActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.details.EtkinlikQrReader"
+            android:label="Kodu Taratın">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="tez.levent.feyyaz.kedi.activities.details.EtkinlikActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.KatilimlarActivity"
+            android:label="Katıldıklarım">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+        </activity>
+
+        <service
+            android:name=".services.GetData"
+            android:label="Bildirim Kontrol"/>
+
+        <receiver android:name=".receivers.AlarmStartService"/>
+        <receiver android:name=".receivers.AutoStart">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.FavorilerActivity"
+            android:label="Favorilerim">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+        </activity>
+    </application>
+
+</manifest>

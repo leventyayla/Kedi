@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_profile"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tez.levent.feyyaz.kedi.activities.ProfileActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="6dp"
+        android:layout_margin="10dp"
+        android:background="@color/White"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/progressBar"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    tools:ignore="ContentDescription"/>
+
+
+                <TextView
+                    android:text="Yükleniyor..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ad_soyad"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    tools:ignore="HardcodedText"
+                    android:textStyle="normal|bold"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:id="@+id/cikis_yap">
+
+                <ImageView
+                    card_view:srcCompat="@drawable/log_out"
+                    android:id="@+id/imageView2"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    tools:ignore="ContentDescription"/>
+
+                <TextView
+                    android:text="Oturumu Kapat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#b71c1c"
+                    tools:ignore="HardcodedText"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

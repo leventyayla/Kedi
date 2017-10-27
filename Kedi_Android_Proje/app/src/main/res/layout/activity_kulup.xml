@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_kulup"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tez.levent.feyyaz.kedi.activities.details.KulupActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="6dp"
+        android:layout_margin="10dp"
+        android:background="@color/White"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    card_view:srcCompat="@drawable/logo"
+                    android:id="@+id/kulup_logo"
+                    tools:ignore="ContentDescription"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:text="Kulüp Adı"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kulup_adi"
+                    tools:ignore="HardcodedText"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/kulup_logo"
+                    android:layout_toEndOf="@+id/kulup_logo"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="Kulüp açıklaması burada olacak"
+                tools:ignore="HardcodedText"
+                android:id="@+id/hakkimizda"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/takip_spark"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentRight="true"
+                    app:sparkbutton_animationSpeed=".85"
+                    app:sparkbutton_activeImage="@drawable/takip_on"
+                    app:sparkbutton_inActiveImage="@drawable/takip_off"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_primaryColor="@color/colorPrimary"
+                    app:sparkbutton_secondaryColor="@color/colorPrimaryDark"
+                    tools:ignore="RtlHardcoded"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

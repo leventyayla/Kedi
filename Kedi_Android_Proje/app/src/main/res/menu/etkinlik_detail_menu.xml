@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/about"
+        android:enabled="true"
+        android:title="Hakkında"
+        android:icon="@drawable/hakkinda"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/detay"
+        android:enabled="true"
+        android:title="Detay"
+        android:icon="@drawable/detail"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/comments"
+        android:enabled="true"
+        android:title="Yorumlar"
+        android:icon="@drawable/yorumlar"
+        app:showAsAction="ifRoom"/>
+</menu>
