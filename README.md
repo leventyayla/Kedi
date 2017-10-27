@@ -5,7 +5,7 @@ Kulüplerle Etkinlik ve Duyuru İletişimi
 
 Bilgisayar Mühendisliği 2017 Lisans Tez Projesi
 
-<a href="#">
+<a href="https://play.google.com/store/apps/details?id=tez.levent.feyyaz.kedi">
   <img alt="Google Play'den Edin"
        src="https://raw.githubusercontent.com/lvntyyl/Kedi/master/Pictures/get_it.png" />
 </a>
